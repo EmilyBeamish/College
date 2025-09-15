@@ -1,0 +1,134 @@
+/* Css File */
+
+header {
+    background-color: #266fc2;
+    padding: 10px 0;
+}
+
+header a {
+    color: white;
+    text-decoration: none; /* no underline */
+    padding: 10px 15px; 
+    border-radius: 5px; 
+}
+
+header a:hover {
+    background-color: #357ab8;
+}
+
+.navbar {
+    max-width: 1200px; 
+    margin: 0 auto; /* center */
+    padding: 0 20px; 
+    display: flex; 
+    justify-content: space-between; /* flexbox use to spread items*/
+    align-items: center; 
+
+}
+.nav {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    }
+    
+.nav li {
+    margin-left: 10px;
+    }
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4; 
+    margin: 0;
+    padding: 20px;
+}
+
+.content {
+    max-width: 800px; 
+    margin: 40px auto; 
+    padding: 20px; 
+    background-color: #f9f9f9; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.content h1 {
+    font-size: 2.5em; 
+    margin-bottom: 20px; 
+    color: #333; 
+}
+
+.content p {
+    font-size: 1.2em; 
+    line-height: 1.6; 
+    color: #555;
+}
+
+.content-table {
+    display: inline-block;
+    width: 100%; 
+    border-collapse: collapse;
+}
+
+.content-table th, .content-table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.content-table th {
+    background-color: #f1f1f1;
+    font-weight: bold;
+}
+
+.form-group {
+    margin-bottom: 15px; 
+}
+
+label {
+    display: block; 
+    margin-bottom: 5px; 
+    font-weight: bold; 
+}
+
+.submit-button {
+    display: block;
+    margin: 0 auto;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+.book-button {
+    display: block;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none; 
+}
+
+
+.book-button:hover {
+    background-color: #0056b3; 
+}
+
+footer {
+    text-align: center;
+}
+
+.secret input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}

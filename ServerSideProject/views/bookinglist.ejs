@@ -1,0 +1,40 @@
+
+<% include partials/head %>
+
+    
+    <div class="content"> 
+        <h1><%= title %></h1> 
+            <table class="content-table">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>ID</th>
+                        <th>Email</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% for(var i=0; i < bookinglist.length; i++) { %>
+                        <tr>
+                            <td> <%= bookinglist[i].name %> </td>
+                            <td> <%= bookinglist[i].numberid %> </td>
+                            <td> <%= bookinglist[i].email %> </td>
+                            <td> <%= bookinglist[i].date %></td>
+                            <td> <%= bookinglist[i].time %></td>
+                            <td>
+                                <div class="secret">
+                                    <form action="/bookings/delete" method="post"> <input type="String" value="<%= bookinglist[i].id%>" name="id" readonly><button type="Submit"><span></span>Delete</button></form>
+                                    <form action="/bookings/update" method="post"> <input type="String" value="<%=bookinglist[i].id%>" name="id" readonly><button type="Submit"><span></span>Update</button></form>
+                                </div>
+                            </td>
+                        </tr>
+                        <% } %>
+                
+                </tbody>
+            </table>
+    </div>
+
+<% include partials/foot %>
+

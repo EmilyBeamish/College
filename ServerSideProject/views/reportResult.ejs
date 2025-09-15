@@ -1,0 +1,33 @@
+<% include partials/head %>
+
+<div class="content">
+    <h1><%= title %></h1>
+    <% if (bookings.length > 0) { %> <!--checks for bookings--> 
+        <table border="1" cellspacing="0" cellpadding="5">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    <th>Email</th>
+                    <th>Number ID</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% bookings.forEach((booking, index) => { %>
+                    <tr>
+                        <td><%= index + 1 %></td>
+                        <td><%= booking.date ? booking.date.toDateString() : 'N/A' %></td>
+                        <td><%= booking.time %></td>
+                        <td><%= booking.email %></td>
+                        <td><%= booking.numberid %></td>
+                    </tr>
+                <% }) %>
+            </tbody>
+        </table>
+    <% } else { %>
+        <p>No training sessions found.</p>
+    <% } %>
+</div>
+
+<% include partials/foot %>
